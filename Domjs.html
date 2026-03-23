@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="txt">Hello HTML Element</h1>
+    <button id="btn-click" class="btn btn-primary">click Me</button>
+    <h2 id="show-txt" class="text-center text-danger"></h2>
+</body>
+
+</html>
+<script>
+    const text = "Hello Js Dom";
+    document.getElementById('txt').innerText = text;
+
+    let check = true;
+    document.getElementById("btn-click").addEventListener("click", () => {
+        if (check) {
+            document.getElementById("show-txt").innerText = "Welcome to my class";
+            check = false;
+        } else {
+            document.getElementById("show-txt").innerText = "";
+            check = true;
+        }
+    })
+</script>
